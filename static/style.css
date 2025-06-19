@@ -2,23 +2,41 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  background: radial-gradient(circle at top left, #1f1f1f, #0e0e0e);
   color: #ffffff;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   overflow: hidden;
 }
 
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
 .container {
-  background: rgba(30, 30, 30, 0.95);
+  background: rgba(20, 20, 20, 0.96);
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 25px #ffbd39, 0 0 35px rgba(255, 189, 57, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 25px #ffbd39, 0 0 50px rgba(255, 189, 57, 0.25);
   width: 500px;
   max-width: 90%;
   text-align: center;
+  z-index: 1;
+  position: relative;
+  animation: fadeInUp 0.7s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 h1 {
@@ -33,6 +51,7 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 input[type="text"] {
@@ -41,6 +60,8 @@ input[type="text"] {
   border: none;
   border-radius: 5px;
   font-size: 16px;
+  background-color: #1a1a1a;
+  color: #fff;
 }
 
 input[type="text"]:focus {
@@ -78,10 +99,4 @@ button:hover {
   margin-top: 15px;
   font-size: 14px;
   color: #bbbbbb;
-}
-
-@keyframes sparkle {
-  0% { opacity: 0.2; }
-  50% { opacity: 0.9; }
-  100% { opacity: 0.2; }
 }
