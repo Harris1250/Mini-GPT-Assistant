@@ -11,10 +11,13 @@
       <input type="text" name="prompt" placeholder="Ask me something..." required>
       <button type="submit">Send</button>
     </form>
+    <p class="prompt-hint">
+      Try asking: “Tell me a joke”, “What’s your name?”, or “How are you?”
+    </p>
     {% if user_input %}
       <div class="chat-box">
         <p><strong>You:</strong> {{ user_input }}</p>
-        <p><strong>GPT:</strong> {{ response }}</p>
+        <p><strong>Assistant:</strong> {{ response }}</p>
       </div>
     {% endif %}
   </div>
