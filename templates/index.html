@@ -5,6 +5,16 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <style>
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.05;
+    z-index: 0;
+  }
+</style>
   <div class="container">
     <h1>Mini GPT Assistant</h1>
     <form method="POST">

@@ -1,32 +1,46 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #ffffff;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  overflow: hidden;
 }
 
 .container {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #ffbd39, 0 0 35px rgba(255, 189, 57, 0.4);
   width: 500px;
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ffbd39;
+  max-width: 90%;
   text-align: center;
 }
 
 h1 {
+  font-size: 32px;
   margin-bottom: 20px;
+  background: linear-gradient(45deg, #ffbd39, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input[type="text"] {
+  padding: 12px;
   width: 70%;
-  padding: 10px;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 input[type="text"]:focus {
@@ -34,30 +48,40 @@ input[type="text"]:focus {
 }
 
 button {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   background-color: #ffbd39;
   color: #000;
+  font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  transition: all 0.2s ease;
 }
 
 button:hover {
   background-color: #ffc107;
-  color: #000;
+  transform: scale(1.05);
 }
 
 .chat-box {
-  margin-top: 20px;
+  margin-top: 30px;
   text-align: left;
-  background-color: #2a2a2a;
-  padding: 15px;
-  border-radius: 5px;
+  background: #2a2a2a;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .prompt-hint {
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
-  color: #ccc;
+  color: #bbbbbb;
+}
+
+@keyframes sparkle {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.9; }
+  100% { opacity: 0.2; }
 }
