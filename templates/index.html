@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini GPT Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Mini GPT Assistant</h1>
+    <form method="POST">
+      <input type="text" name="prompt" placeholder="Ask me something..." required>
+      <button type="submit">Send</button>
+    </form>
+    {% if user_input %}
+      <div class="chat-box">
+        <p><strong>You:</strong> {{ user_input }}</p>
+        <p><strong>GPT:</strong> {{ response }}</p>
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
